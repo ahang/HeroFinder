@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ahang/HeroFinder/issues"
   },
-  "homepage": "https://github.com/ahang/HeroFinder#readme"
+  "homepage": "https://github.com/ahang/HeroFinder#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
 }

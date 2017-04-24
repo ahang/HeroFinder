@@ -4,7 +4,6 @@
 // =====================================================
 var express = require("express");
 var bodyParser = require("body-parser");
-var path = require("path");
 // =====================================================
 // Setting up Express App
 var app = express();
@@ -15,4 +14,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // =====================================================
+require("./routing/htmlRoutes.js")(app);
+require("./routing/apiRoutes.js")(app);
 
+//======================================================
+//Server Listening
+app.listen(PORT, function() {
+    console.log(`HERO FINDER Listening on Port ${PORT}`);
+});
