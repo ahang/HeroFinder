@@ -1,5 +1,10 @@
 //Capturing form input
 $("#submit").on("click", function(event) {
+	//TODO: User Validation
+	function userValidate() {
+	}
+
+
 	event.preventDefault();
 
 	var userInput = {
@@ -18,7 +23,7 @@ $("#submit").on("click", function(event) {
 			$("#q10").val()
 		]
 	};
-
+	//TODO: Posting 
 	$.post("/api/friends", userInput, function(data) {
 		console.log("testing");
 	})
