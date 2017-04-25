@@ -10,6 +10,6 @@ module.exports = function(app) {
     });
 
     app.post("/api/friends", function(request, response) {
-        response.send("Something is quite not right");
+        friendData.push(request.body);
     });
 };

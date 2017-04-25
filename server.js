@@ -15,9 +15,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // =====================================================
+//grabbing routes from htmlRoutes and apiRoutes
 require("./app/routing/htmlRoutes.js")(app);
 require("./app/routing/apiRoutes.js")(app);
-
+//serving static file in express
 app.use(express.static("./app/public"));
 
 //======================================================

@@ -19,6 +19,10 @@ $("#submit").on("click", function(event) {
 		]
 	};
 
+	$.post("/api/friends", userInput, function(data) {
+		console.log("testing");
+	})
+
 	console.log(userInput);
 });
 
