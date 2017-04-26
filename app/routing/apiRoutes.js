@@ -11,7 +11,15 @@ module.exports = function(app) {
 
     app.post("/api/friends", function(request, response) {
         friendData.push(request.body);
+
         console.log(request.body);
+        var userArray = request.body.scores;
+
+        console.log(userArray);
+        console.log(friendData);
+        for (var i = 0; i < friendData.length; i++) {
+            console.log(`${friendData[i].scores}`);
+        }
         response.send("HELP");
     });
 };
