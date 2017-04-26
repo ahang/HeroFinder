@@ -23,9 +23,9 @@ $("#submit").on("click", function(event) {
 			$("#q10").val()
 		]
 	};
-	//TODO: Posting 
+	//TODO: Posting
 	$.post("/api/friends", userInput, function(data) {
-		console.log("testing");
+		console.log(data);
 	})
 
 	console.log(userInput);
