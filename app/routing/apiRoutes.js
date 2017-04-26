@@ -11,14 +11,13 @@ module.exports = function(app) {
 
     app.post("/api/friends", function(request, response) {
         var bestMatch;
-        //TODO: Compare userArray.scores to each item in the heroArray.scores.
-        //TODO: Do Math function and get a value.
-        //TODO: Return smallest amount of difference between the two arrays
+
         friendData.push(request.body);
 
         console.log(request.body);
         var userArray = request.body.scores;
         console.log(`Before convert ${userArray}`);
+
         function convertInt(arr) {
             arr = arr.map(function(n) {
                 return parseInt(n);
@@ -27,21 +26,25 @@ module.exports = function(app) {
         convertInt(userArray);
         console.log(`After convert ${userArray}`);
 
-        // function distance(arr1, arr2) {
-        //     for (var i = 0; i < arr1.length; i ++) {
-        //         console.log(`This is values before .map ${arr1}`);
-        //         //console.log(`This is subtracting before .map ${arr1.scores[i] - arr2.scores[i]}`);
+        function distance(arr1, arr2) {
+            for (var i = 0; i < arr1.length; i ++) {
+                console.log(`This is values before .map ${arr1}`);
+                //console.log(`This is subtracting before .map ${arr1.scores[i] - arr2.scores[i]}`);
 
-        //         arr1 = arr1.map(function(n) {
-        //             return parseInt(n);
-        //         });
-
-        //         console.log(`This is values after .map ${arr1}`);
-        //         console.log(`This is subtracting after .map ${arr1.scores[i] - arr2.scores[i]}`);
-        //         //var distance = parseInt(arr1[i] - arr2[i])
-        //         //console.log(`The ${[i]} distance is ${distance}`);
-        //     }
-        // }
+                console.log(`This is values after .map ${arr1}`);
+                console.log(`This is subtracting after .map ${arr1.scores[i] - arr2.scores[i]}`);
+                //var distance = parseInt(arr1[i] - arr2[i])
+                //console.log(`The ${[i]} distance is ${distance}`);
+            }
+        }
         response.send("HELP");
     });
 };
+
+
+//TODO: distance function
+//TODO: Convert array to int
+//TODO: missing something
+//TODO: Compare userArray.scores to each item in the heroArray.scores.
+//TODO: Do Math function and get a value.
+//TODO: Return smallest amount of difference between the two arrays
