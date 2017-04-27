@@ -25,7 +25,12 @@ $("#submit").on("click", function(event) {
 	};
 	//TODO: Posting
 	$.post("/api/friends", userInput, function(data) {
-		console.log(data);
+		console.log("This is the data from the back" + data);
+
+		$("#matchName").text(data.name);
+		$("#matchImg").attr("src", data.photo);
+
+		$("#resultsModal").modal("toggle");
 	})
 
 	console.log(userInput);

@@ -3,7 +3,7 @@
 var heroArray = [
     {
         "name": "Captain America",
-        "photo": "http://imgur.com/fWiehLO",
+        "photo": "http://i.annihil.us/u/prod/marvel/movies/civilwar/images/captainamerica_hero.png",
         "scores": [
            "4",
            "2",
@@ -19,7 +19,7 @@ var heroArray = [
     },
     {
         "name": "Hawkeye",
-        "photo": "http://imgur.com/SJfowC8",
+        "photo": "https://cdn.bleedingcool.net/wp-content/uploads/2017/03/Hawkeye.jpg",
         "scores": [
             "3",
             "1",
@@ -35,7 +35,7 @@ var heroArray = [
     },
     {
         "name": "Thor",
-        "photo": "http://imgur.com/Ecs77Nr",
+        "photo": "http://img.cinemablend.com/quill/b/e/e/0/e/f/bee0ef8beb8cc11ced998fc20ec49c128671dc1d.jpg",
         "scores": [
             "2",
             "5",
@@ -51,7 +51,7 @@ var heroArray = [
     },
     {
         "name": "Ultron",
-        "photo": "http://imgur.com/LGBUdLY",
+        "photo": "https://www.sideshowtoy.com/wp-content/uploads/2015/02/902343-product-silo.png",
         "scores": [
             "1",
             "2",
