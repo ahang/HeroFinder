@@ -80,7 +80,23 @@ var heroArray = [
             "5",
             "2"
         ]
-    }
+    },
+    {
+        "name": "Hulk",
+        "photo": "http://cdn.movieweb.com/img.news.tops/NEbZRNg3YX0cfc_1_b.jpg",
+        "scores": [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1"
+        ]
+    },
 ];
 
 module.exports = heroArray;
