@@ -64,8 +64,23 @@ var heroArray = [
             "3",
             "5"
         ]
+    },
+    {
+        "name": "Iron Man",
+        "photo": "http://screenrant.com/wp-content/uploads/Greatest-Superhero-Films-Iron-Man.jpg",
+        "scores": [
+            "4",
+            "3",
+            "5",
+            "1",
+            "3",
+            "2",
+            "4",
+            "3",
+            "5",
+            "2"
+        ]
     }
-
 ];
 
 module.exports = heroArray;
