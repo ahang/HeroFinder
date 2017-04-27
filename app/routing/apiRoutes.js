@@ -11,38 +11,46 @@ module.exports = function(app) {
 
     app.post("/api/friends", function(request, response) {
         var bestMatch;
-
         friendData.push(request.body);
-
-        console.log(request.body);
         var userArray = request.body.scores;
-        console.log(`Before convert ${userArray}`);
-
-        function convertInt(arr) {
-            arr = arr.map(function(n) {
-                return parseInt(n);
-            });
-        }
+        var dataArray = friendData[0].scores;
         convertInt(userArray);
-        console.log(`After convert ${userArray}`);
+        convertInt(dataArray);
+        var absArray = distance(userArray, dataArray);
+        console.log(absArray);
 
-        function distance(arr1, arr2) {
-            for (var i = 0; i < arr1.length; i ++) {
-                console.log(`This is values before .map ${arr1}`);
-                //console.log(`This is subtracting before .map ${arr1.scores[i] - arr2.scores[i]}`);
 
-                console.log(`This is values after .map ${arr1}`);
-                console.log(`This is subtracting after .map ${arr1.scores[i] - arr2.scores[i]}`);
-                //var distance = parseInt(arr1[i] - arr2[i])
-                //console.log(`The ${[i]} distance is ${distance}`);
-            }
-        }
+       // console.log(values);
+
+
         response.send("HELP");
     });
 };
 
 
 //TODO: distance function
+
+function distance(arr1, arr2) {
+    // var values = [];
+    // console.log(`This is array 1 | ${arr1}`);
+    // console.log(`This is array 2 | ${arr2}`);
+    // console.log("Starting loop...");
+    return arr2.map(function (el, i) {
+        return Math.abs(el - arr1[i]);
+    });
+
+    // for (var i = 0; i < arr1.length; i++) {
+    //     console.log(`working on ${arr[i]} and ${arr2[i]}`);
+    //     values.push(Math.abs[arr1[i] - arr2[i]]);
+    //     console.log(values);
+    // }
+}
+
+function convertInt(arr) {
+    arr = arr.map(function(n) {
+        return parseInt(n);
+    });
+}
 //TODO: Convert array to int
 //TODO: missing something
 //TODO: Compare userArray.scores to each item in the heroArray.scores.
