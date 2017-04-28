@@ -51,6 +51,7 @@ $("#submit").on("click", function(event) {
             $("#resultsModal").modal("toggle");
         })
     } else {
+        //If user have empty fields. Input into the Modal and pop it up on screen. Better then using Alerts!
     	$("#matchName").text("Please fill out all the fields");
     	$("#resultsModal").modal("toggle");
     }
