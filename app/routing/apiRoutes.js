@@ -1,14 +1,19 @@
 //Your apiRoutes.js file should contain two routes:
 // A GET route with the url /api/friends. This will be used to display a JSON of all possible friends.
 // A POST routes /api/friends. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
+
+//Loading data
 var friendData = require("../data/friends");
 //console.log(friendData);
 
 module.exports = function(app) {
+    //API Get Requests
+    //The below code will handle when a user visits a page
     app.get("/api/friends", function(request, response) {
         response.json(friendData);
     });
-
+    //API post request
+    //The below code will handle when a user submits data to the server
     app.post("/api/friends", function(request, response) {
         //setting the user submission to a userArray to grab the necessary values
         var userArray = request.body.scores;
@@ -48,14 +53,14 @@ module.exports = function(app) {
 };
 
 //Using .map to create a new array by taking the abs value on every element of the array
-//Thanks stackoverflow! 
+//Thanks stackoverflow!
 function distance(arr1, arr2) {
     return arr2.map(function(el, i) {
         return Math.abs(el - arr1[i]);
     });
 }
 
-//Using sum function to add each element of the absolute value array. 
+//Using sum function to add each element of the absolute value array.
 function sum(arr) {
     var total = 0;
     for (var i = 0; i < arr.length; i++) {
