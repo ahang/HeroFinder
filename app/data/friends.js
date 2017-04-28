@@ -97,6 +97,22 @@ var heroArray = [
             "1"
         ]
     },
+    {
+        "name": "Black Panther",
+        "photo": "http://digitalspyuk.cdnds.net/16/21/768x432/gallery-1464084737-black-panther-civil-war.jpg",
+        "scores": [
+            "2",
+            "3",
+            "4",
+            "3",
+            "2",
+            "2",
+            "3",
+            "4",
+            "5",
+            "2"
+        ]
+    }
 ];
 
 module.exports = heroArray;
